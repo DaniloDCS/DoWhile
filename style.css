@@ -1,0 +1,393 @@
+:root {
+    --green: #07b807;
+    --blue: #020222;
+    --esmeralda: #04E474;
+    --red: #FC0404;
+    --yellow: #FCEB04;
+    --purple: #841794;
+    --vine: #3C2C6C;
+    --gray: #545454;
+    --pink: #F61463;
+    --turkey: #0468AF;
+    --orange: #FC5C04;
+    --brown: #7C3404;
+    --white: #ffffff;
+    --black: #000000;
+    --light-gray: #f5f5f5;
+    --cyan: #04FCFC;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+.dark,
+.dark .container-app {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.light,
+.light .container-app {
+    color: black;
+    background-color: var(--light-gray);
+}
+
+.dark ::selection {
+    color: var(--black);
+    background-color: var(--white);
+    font-weight: 800;
+}
+
+.light ::selection {
+    color: var(--white);
+    background-color: var(--black);
+    font-weight: 800;
+}
+
+#progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-top: 6px solid var(--green);
+    z-index: 1000;
+}
+
+.container-app {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+}
+
+.title {
+    padding: 0 0 20px 0;
+}
+
+.user {
+    width: 60%;
+}
+
+.dark .title {
+    color: var(--cyan);
+}
+
+.light .title {
+    color: var(--black);
+}
+
+.question,
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.question {
+    background-color: var(--light-gray);
+    color: var(--black);
+    padding: 8px;
+    border-radius: 8px;
+    font-size: large;
+    filter: drop-shadow(0 0 10px rgb(173, 148, 148));
+}
+
+p {
+    padding: 10px 0;
+    text-align: justify;
+    text-indent: 40px;
+    font-size: 18px;
+}
+
+.config {
+    display: flex;
+    align-items: stretch;
+}
+
+button {
+    min-width: 50px;
+    padding: 8px;
+    font-weight: 700;
+    border-radius: 6px;
+    margin: 4px;
+}
+
+.config button {
+    background-color: var(--black);
+    color: white;
+    border: 1px solid white;
+}
+
+.config button:hover {
+    background-color: var(--white);
+    color: black;
+    border: 1px solid white;
+}
+
+#mode {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 1px;
+    background-color: var(--cyan);
+}
+
+#mode div {
+    width: 50%;
+    height: 100%;
+}
+
+.moon,
+.sun {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sun {
+    background-image: url("./images/sun.png");
+    border-radius: 0 50px 50px 0;
+}
+
+.moon {
+    background-image: url("./images/moon.png");
+    border-radius: 50px 0 0 50px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+ul li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.dark ul li a,
+.dark .description {
+    color: var(--white);
+}
+
+.light ul li a,
+.light .description {
+    color: var(--black);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.description {
+    text-indent: 0px;
+}
+
+.description a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.triangle,
+.triangle2,
+.triangle3,
+.triangle4,
+.triangle5,
+.triangle6,
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5,
+.circle6 {
+    position: absolute;
+    filter: drop-shadow(0 0 7px #333);
+}
+
+.triangle {
+    top: 80%;
+    left: 20px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid red;
+}
+
+.triangle2 {
+    top: 20%;
+    right: 20px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid green;
+}
+
+.triangle3 {
+    top: 50%;
+    left: 15%;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid var(--orange);
+}
+
+.triangle4 {
+    top: 20%;
+    left: 5%;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid var(--cyan);
+}
+
+.triangle5 {
+    top: 37%;
+    right: 5%;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid var(--purple);
+}
+
+.triangle6 {
+    top: 100%;
+    right: 14%;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 60px solid var(--turkey);
+}
+
+.circle1 {
+    top: 120%;
+    right: 6%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--yellow);
+    border-radius: 60px;
+}
+
+.circle2 {
+    top: 110%;
+    left: 14%;
+    width: 37px;
+    height: 37px;
+    background-color: var(--pink);
+    border-radius: 37px;
+}
+
+.circle3 {
+    top: 140%;
+    left: 5%;
+    width: 47px;
+    height: 47px;
+    background-color: var(--esmeralda);
+    border-radius: 47px;
+}
+
+.circle4 {
+    top: 130%;
+    right: 8%;
+    width: 67px;
+    height: 67px;
+    background-color: var(--red);
+    border-radius: 47px;
+}
+
+.circle5 {
+    top: 40%;
+    left: 8%;
+    width: 45px;
+    height: 45px;
+    background-color: var(--pink);
+    border-radius: 45px;
+}
+
+@media (min-width: 320px) {
+    .container-app {
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+    }
+
+    ul li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul li a {
+        width: fit-content;
+    }
+}
+
+@media (min-width: 720px) {
+    .container-app {
+        width: 70%;
+        margin: auto;
+        left: 15%;
+    }
+
+    ul li {
+        width: fit-content;
+    }
+
+    ul li a {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-app {
+        width: 60%;
+        left: 20%;
+    }
+}
+
+.warning {
+    background-color: var(--green);
+    color: var(--white);
+    font-weight: 600;
+    padding: 8px;
+    width: fit-content;
+    border-radius: 6px;
+    position: fixed;
+    animation: copy-effect 8s ease-in;
+    opacity: 0;
+    z-index: 1001;
+}
+
+@keyframes copy-effect {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        background-color: transparent;
+        opacity: 0;
+    }
+}
